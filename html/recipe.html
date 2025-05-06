@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Details</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!---Load navbar form navbar.html-->
+    <script>
+      $(document).ready(function () {
+        $("#navbar-container").load("navbar.html");
+      });
+    </script>
+    <link rel="stylesheet" href="../scss/recipes.css" />
+
+    <script src="../js/recipes.js" defer></script>
+    <link rel="stylesheet" href="../scss/recipes.css" />
+    <script>
+      $(document).ready(function () {
+        $("#navbar-container").load("navbar.html");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <div id="recipe-content">
+      <h1 id="recipe-title"></h1>
+      <p id="recipe-about"></p>
+      <h3>Ingredients:</h3>
+      <ul id="recipe-ingredients"></ul>
+      <h3>Method:</h3>
+      <p id="recipe-method"></p>
+    </div>
+    <script src="../js/recipes.js" defer></script>
+  </body>
+</html>

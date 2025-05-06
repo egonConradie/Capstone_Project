@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!---Load navbar form navbar.html-->
+    <script>
+      $(document).ready(function () {
+        $("#navbar-container").load("navbar.html");
+      });
+    </script>
+    <link rel="stylesheet" href="../scss/style.css" />
+    <link rel="stylesheet" href="../scss/recipes.css" />
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <h1>Recipes</h1>
+    <blockquote class="quote">Taste buds don’t lie!</blockquote>
+
+    <div class="container" id="recipe-container">
+      <!-- recipe1 -->
+      <div class="item">
+        <img
+          src="../images/burger.jpg"
+          alt="Beef Burger"
+          data-recipe="burger"
+        />
+        <p id="food-info">Beef burgers | • Prep: low | • Cook: 15 min</p>
+        <button class="save-btn" data-recipe="burger">Save for Later</button>
+        <button class="like-btn" data-recipe="burger">Like</button>
+        <!---Comment section -->
+        <div class="comment-section">
+          <h2>Leave a Comment</h2>
+          <textarea class="comment-input" rows="4"></textarea>
+          <button class="submit-comment">Submit Comment</button>
+          <div class="comments-container">
+            <h3>Comments:</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- recipe 2 -->
+      <div class="item">
+        <img
+          src="../images/spagheti.jpg"
+          alt="Spaghetti Bolognese"
+          data-recipe="spaghetti"
+        />
+        <p id="food-info">Spaghetti bolognese | • Prep: med | • Cook: 45 min</p>
+        <button class="save-btn" data-recipe="spaghetti">Save for Later</button>
+        <button class="like-btn" data-recipe="spaghetti">Like</button>
+        <div class="comment-section">
+          <h2>Leave a Comment</h2>
+          <textarea class="comment-input" rows="4"></textarea>
+          <button class="submit-comment">Submit Comment</button>
+          <div class="comments-container">
+            <h3>Comments:</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- recipe 3 -->
+      <div class="item">
+        <img src="../images/chips.jpg" alt="French Fries" data-recipe="fries" />
+        <p id="food-info">French fries | • Prep: low | • Cook: 25 min</p>
+        <button class="save-btn" data-recipe="fries">Save for Later</button>
+        <button class="like-btn" data-recipe="fries">Like</button>
+        <div class="comment-section">
+          <h2>Leave a Comment</h2>
+          <textarea class="comment-input" rows="4"></textarea>
+          <button class="submit-comment">Submit Comment</button>
+          <div class="comments-container">
+            <h3>Comments:</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- recipe 4 -->
+      <div class="item">
+        <img src="../images/pizza.jpg" alt="Pizza" data-recipe="pizza" />
+        <p id="food-info">Pizza | • Prep: med | • Cook: 15 min</p>
+        <button class="save-btn" data-recipe="pizza">Save for Later</button>
+        <button class="like-btn" data-recipe="pizza">Like</button>
+        <div class="comment-section">
+          <h2>Leave a Comment</h2>
+          <textarea class="comment-input" rows="4"></textarea>
+          <button class="submit-comment">Submit Comment</button>
+          <div class="comments-container">
+            <h3>Comments:</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- recipe 5 -->
+      <div class="item">
+        <img
+          src="../images/shawarma.jpg"
+          alt="Beef Shawarma"
+          data-recipe="shawarma"
+        />
+        <p id="food-info">Beef Shawarma | • Prep: high | • Cook: 20 min</p>
+        <button class="save-btn" data-recipe="shawarma">Save for Later</button>
+        <button class="like-btn" data-recipe="shawarma">Like</button>
+        <div class="comment-section">
+          <h2>Leave a Comment</h2>
+          <textarea class="comment-input" rows="4"></textarea>
+          <button class="submit-comment">Submit Comment</button>
+          <div class="comments-container">
+            <h3>Comments:</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Item 6 -->
+      <div class="item">
+        <img src="../images/waffle.jpg" alt="Waffles" data-recipe="waffle" />
+        <p id="food-info">Waffles | • Prep: low | • Cook: 10 min</p>
+        <button class="save-btn" data-recipe="waffle">Save for Later</button>
+        <button class="like-btn" data-recipe="waffle">Like</button>
+        <div class="comment-section">
+          <h2>Leave a Comment</h2>
+          <textarea class="comment-input" rows="4"></textarea>
+          <button class="submit-comment">Submit Comment</button>
+          <div class="comments-container">
+            <h3>Comments:</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- recipe 7 -->
+      <div class="item">
+        <img src="../images/granola.jpg" alt="Granola" data-recipe="granola" />
+        <p id="food-info">Granola | • Prep: med | • Cook: 20 min</p>
+        <button class="save-btn" data-recipe="granola">Save for Later</button>
+        <button class="like-btn" data-recipe="granola">Like</button>
+        <div class="comment-section">
+          <h2>Leave a Comment</h2>
+          <textarea class="comment-input" rows="4"></textarea>
+          <button class="submit-comment">Submit Comment</button>
+          <div class="comments-container">
+            <h3>Comments:</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- recipe 8 -->
+      <div class="item">
+        <img
+          src="../images/chowmein.jpg"
+          alt="Chow Mein"
+          data-recipe="chowmein"
+        />
+        <p id="food-info">Chow Mein | • Prep: med | • Cook: 15 min</p>
+        <button class="save-btn" data-recipe="chowmein">Save for Later</button>
+        <button class="like-btn" data-recipe="chowmein">Like</button>
+        <div class="comment-section">
+          <h2>Leave a Comment</h2>
+          <textarea class="comment-input" rows="4"></textarea>
+          <button class="submit-comment">Submit Comment</button>
+          <div class="comments-container">
+            <h3>Comments:</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- recipe 9 -->
+      <div class="item">
+        <img src="../images/thai.jpg" alt="Thai Curry" data-recipe="thai" />
+        <p id="food-info">Thai Curry | • Prep: high | • Cook: 25 min</p>
+        <button class="save-btn" data-recipe="thai">Save for Later</button>
+        <button class="like-btn" data-recipe="thai">Like</button>
+
+        <div class="comment-section">
+          <h2>Leave a Comment</h2>
+          <textarea class="comment-input" rows="4"></textarea>
+          <button class="submit-comment">Submit Comment</button>
+          <div class="comments-container">
+            <h3>Comments:</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---JS LINK-->
+    <script src="../js/recipes.js" defer></script>
+  </body>
+</html>

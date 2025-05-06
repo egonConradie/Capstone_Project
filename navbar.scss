@@ -1,0 +1,77 @@
+// Navbar styles
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ff6347; // Tomato color
+  color: #fff;
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative; // Required for dropdown positioning
+      margin: 0 10px;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #cccccc;
+        }
+      }
+
+      // Dropdown menu styles
+      .dropdown-menu {
+        display: none; // hidden at star
+        position: absolute;
+        top: 100%; // Position below the parent menu item
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+        z-index: 1000;
+
+        li {
+          margin: 0;
+
+          a {
+            color: #333; // Dark gray for dropdown links
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+
+            &:hover {
+              background-color: #f9f9f9; // Light gray on hover
+            }
+          }
+        }
+      }
+
+      // Show dropdown menu on hover
+      &:hover .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+}

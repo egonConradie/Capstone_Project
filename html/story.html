@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Story</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!----Css styling link-->
+    <link rel="stylesheet" href="../navbar.css" />
+    <link rel="stylesheet" href="../scss/story.css" />
+    <!---Load navbar form navbar.html-->
+    <script>
+      $(document).ready(function () {
+        $("#navbar-container").load("navbar.html");
+      });
+    </script>
+    <script src="../js/story.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar placeholder -->
+    <div id="navbar-container"></div>
+
+    <!-- Story content -->
+    <button id="hideBtn">Hide Story</button>
+    <button id="animateBtn">Animate Heading</button>
+    <button id="chainBtn">Chained Effects</button>
+
+    <h1 id="storyTitle">Our Story</h1>
+    <p id="storyText">
+      At Go Cook, we believe that great meals bring people together. What
+      started as a small recipe blog in a home kitchen has grown into a vibrant
+      cooking community. Inspired by family traditions and global flavors, we
+      created this space to share easy, delicious recipes anyone can make —
+      whether you're a beginner or a seasoned home chef. Join us on this journey
+      of taste, creativity, and connection — one recipe at a time.
+    </p>
+  </body>
+</html>

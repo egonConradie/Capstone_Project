@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go Cook</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../scss/style.css" />
+    <!---Load navbar form navbar.html-->
+    <script>
+      $(document).ready(function () {
+        $("#navbar-container").load("navbar.html");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <section class="home">
+      <div class="home-info">
+        <h1>Delicious recipes made simple</h1>
+        <br />
+        <h2>Breakfast • Lunch • Dinner</h2>
+        <br />
+      </div>
+      <div class="home-img">
+        <div class="img-box">
+          <div class="img-item">
+            <!---Landing page image-->
+            <img src="../images/landingPage.jpg" alt="Landing Page Image" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---link javscript-->
+    <script src="../js/recipes.js" defer></script>
+  </body>
+</html>

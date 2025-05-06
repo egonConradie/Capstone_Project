@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../navbar.css" />
+    <link rel="stylesheet" href="../scss/contact.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#navbar-container").load("navbar.html");
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Navbar placeholder -->
+    <div id="navbar-container"></div>
+    <div class="container">
+      <h1 class="contact">Contact Form</h1>
+      <input type="text" name="first" placeholder="First name" />
+      <input type="text" name="last" placeholder="Last name" />
+      <input type="email" name="email" placeholder="Email address" />
+
+      <textarea
+        rows="5"
+        cols="60"
+        name="message"
+        placeholder="Enter text message"
+        autocomplete="off"
+      ></textarea>
+      <button type="submit">Send Message</button>
+    </div>
+  </body>
+</html>

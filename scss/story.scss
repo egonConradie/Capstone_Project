@@ -1,0 +1,39 @@
+// Variables for consistency
+$primary-color: #ff6347; // Tomato color
+$secondary-color: #333; // Dark gray
+$background-color: #f9f9f9; // Light gray
+$text-color: #fff; // White
+$font-family: "Arial, sans-serif";
+
+// Global styles
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $secondary-color;
+  margin: 0;
+  padding: 20px;
+}
+
+// Navbar container
+#navbar-container {
+  background-color: $primary-color;
+  padding: 10px 20px;
+  border-bottom: 3px solid darken($primary-color, 10%);
+}
+
+// Button styles
+button {
+  background-color: $primary-color;
+  color: $text-color;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}

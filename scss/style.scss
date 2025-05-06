@@ -1,0 +1,147 @@
+// Variables
+$primary-color: #ff6347; // Tomato color
+$secondary-color: #333; // Dark gray
+$background-color: #f9f9f9; // Light gray
+$text-color: #fff; // White
+$font-family: "Arial, sans-serif";
+
+// Global styles
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $secondary-color;
+}
+
+// Navbar styles
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: $text-color;
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $text-color;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative; // Required for dropdown positioning
+      margin: 0 10px;
+
+      a {
+        text-decoration: none;
+        color: $text-color;
+        font-size: 16px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: darken($text-color, 20%);
+        }
+      }
+
+      // Dropdown menu styles
+      .dropdown-menu {
+        display: none; // hidden at star
+        position: absolute;
+        top: 100%; // Position below the parent menu item
+        left: 0;
+        background-color: $text-color;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+        z-index: 1000;
+
+        li {
+          margin: 0;
+
+          a {
+            color: $secondary-color; // Dark gray for dropdown links
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+
+            &:hover {
+              background-color: $background-color; // Light gray on hover
+            }
+          }
+        }
+      }
+
+      // Show dropdown menu on hover
+      &:hover .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+// Home section styles
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+
+  .home-info {
+    flex: 1;
+
+    h1 {
+      font-size: 48px;
+      margin: 0;
+      color: $primary-color;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 20px;
+      color: $secondary-color;
+    }
+  }
+
+  .home-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .img-box {
+      width: 80%;
+      height: auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      .img-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}
+
+// Footer styles
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: $secondary-color;
+  color: $text-color;
+  font-size: 14px;
+}

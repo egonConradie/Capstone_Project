@@ -1,0 +1,106 @@
+// Variables
+$primary-color: #ff6347; // Tomato color
+$secondary-color: #333; // Dark gray
+$background-color: #f9f9f9; // Light gray
+$text-color: #fff; // White
+$font-family: "Arial, sans-serif";
+
+// Global styles
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $secondary-color;
+}
+
+// Navbar styles
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: $text-color;
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $text-color;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 10px;
+
+      a {
+        text-decoration: none;
+        color: $text-color;
+        font-size: 16px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: darken($text-color, 20%);
+        }
+      }
+
+      &.active a {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Recipes container styles
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 columns
+  gap: 20px; // Space between items
+  padding: 20px;
+}
+
+.item {
+  background-color: $text-color;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #food-info {
+    padding: 10px;
+    font-size: 16px;
+    color: $secondary-color;
+  }
+
+  button {
+    margin: 10px 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: $text-color;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}

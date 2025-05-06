@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saved Recipes</title>
+    <link rel="stylesheet" href="../navbar.css" />
+    <link rel="stylesheet" href="../scss/saved.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!---Load navbar form navbar.html-->
+    <script>
+      $(document).ready(function () {
+        $("#navbar-container").load("navbar.html");
+      });
+    </script>
+    <script src="../js/saved.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar placeholder -->
+    <div id="navbar-container"></div>
+    <h1>Saved Recipes</h1>
+    <div id="saved-container">
+      <!-- Saved recipes will be added here -->
+    </div>
+    <script src="../js/recipes.js" defer></script>
+  </body>
+</html>
