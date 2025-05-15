@@ -1,24 +1,15 @@
-/*# sourceMappingURL=saved.css.map */
-
 body {
   font-family: "Arial, sans-serif";
   background-color: #f9f9f9;
-  color: #333;
   margin: 0;
-  padding: 0;
-}
-
-h1 {
-  text-align: center;
-  color: #ff6347;
-  margin-top: 20px;
+  padding: 20px;
 }
 
 #saved-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding: 20px;
+  margin-top: 20px;
 }
 
 .item {
@@ -27,32 +18,43 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  padding: 10px;
+  transition: transform 0.3s ease;
+}
+.item:hover {
+  transform: translateY(-5px);
 }
 
 .item img {
   width: 100%;
-  height: auto;
-  border-bottom: 1px solid #ddd;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.item h2 {
+  font-size: 1.5rem;
+  color: #ff6347;
+  margin: 10px 0;
 }
 
 .item p {
-  margin: 10px 0;
-  font-size: 16px;
-  color: #555;
+  font-size: 1rem;
+  color: #333;
+  margin: 10px 15px;
 }
 
-button {
-  margin: 10px 5px;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
+.view-recipe-btn {
+  display: inline-block;
   background-color: #ff6347;
   color: #fff;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
-
-button:hover {
+.view-recipe-btn:hover {
   background-color: #ff3814;
-}
+}/*# sourceMappingURL=saved.css.map */
