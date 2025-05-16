@@ -33,7 +33,10 @@ Once the `index.html` file is opened in your browser:
 - Use the heart icon to like a recipe.
 - Leave feedback or suggestions through the comment section below each recipe.
 
+## 👨‍💻 Credits
 
+- **Author:** Egon Heinz Conradie  
+  This project was completed independently as part of the HyperionDev Full Stack Web Development Bootcamp.
 
 ## Installation
 
