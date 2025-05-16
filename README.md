@@ -19,6 +19,22 @@ The Recipe App is a web-based application designed for food enthusiasts to explo
 - [Usage](#-usage)
 - [Credits](#-credits)
 
+## 📷 Usage
+
+Once the `index.html` file is opened in your browser:
+
+- You will land on a welcome page with a navigation bar at the top.
+- From the menu bar, you can:
+  - View available recipes.
+  - Access your saved recipes.
+  - Visit the contact page for more information.
+- The homepage also displays a banner and featured recipe image.
+- Click on any recipe card to view full details, including ingredients and instructions.
+- Use the heart icon to like a recipe.
+- Leave feedback or suggestions through the comment section below each recipe.
+
+
+
 ## Installation
 
 To run this project locally:
