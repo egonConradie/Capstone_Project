@@ -38,6 +38,8 @@ Once the `index.html` file is opened in your browser:
 - **Author:** Egon Heinz Conradie  
   This project was completed independently as part of the HyperionDev Full Stack Web Development Bootcamp.
 
+![Capstone Screenshot](images/capScreenshot.png)
+
 ## Installation
 
 To run this project locally:
