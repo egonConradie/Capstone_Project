@@ -5,26 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Story</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!----Css styling link-->
-    <link rel="stylesheet" href="../navbar.css" />
-    <link rel="stylesheet" href="../scss/story.css" />
-    <!---Load navbar form navbar.html-->
-    <script>
-      $(document).ready(function () {
-        $("#navbar-container").load("navbar.html");
-      });
-    </script>
-    <script src="../js/story.js" defer></script>
+    <link rel="stylesheet" href="scss/navbar.css" />
+    <link rel="stylesheet" href="scss/story.css" />
+    <script src="js/story.js" defer></script>
   </head>
   <body>
-    <!-- Navbar placeholder -->
-    <div id="navbar-container"></div>
+    <nav class="navbar">
+      <a href="index.html" class="logo"
+        ><i class="fa-solid fa-burger"></i> Go Cook</a
+      >
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="saved.html">Saved Recipes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
+    <!-- Example image and link usage -->
+    <img src="images/logo.png" alt="Logo" />
+    <a href="navbar.html">Navbar</a>
     <!-- Story content -->
     <button id="hideBtn">Hide Story</button>
     <button id="animateBtn">Animate Heading</button>
     <button id="chainBtn">Chained Effects</button>
-
     <h1 id="storyTitle">Our Story</h1>
     <p id="storyText">
       At Go Cook, we believe that great meals bring people together. What

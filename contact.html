@@ -4,24 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="../scss/navbar.css" />
-    <link rel="stylesheet" href="../scss/contact.css" />
+    <link rel="stylesheet" href="scss/navbar.css" />
+    <link rel="stylesheet" href="scss/contact.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#navbar-container").load("navbar.html");
-      });
-    </script>
   </head>
   <body>
-    <!-- Navbar placeholder -->
-    <div id="navbar-container"></div>
+    <!-- inlined navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="logo"
+        ><i class="fa-solid fa-burger"></i> Go Cook</a
+      >
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="saved.html">Saved Recipes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
     <div class="container">
       <h1 class="contact">Contact Form</h1>
       <input type="text" name="first" placeholder="First name" />
       <input type="text" name="last" placeholder="Last name" />
       <input type="email" name="email" placeholder="Email address" />
-
       <textarea
         rows="5"
         cols="60"
@@ -30,6 +35,9 @@
         autocomplete="off"
       ></textarea>
       <button type="submit">Send Message</button>
+      <img src="images/logo.png" alt="Logo" />
+      <a href="navbar.html">Navbar</a>
     </div>
+    <script src="js/recipes.js" defer></script>
   </body>
 </html>

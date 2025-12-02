@@ -301,6 +301,98 @@ $(document).ready(function () {
       alert("Recipe is already saved!");
     }
   });
+
+  // --- Existing initialization code (combine everything that was in other ready blocks) ---
+  // Example placeholders for other initialization routines your file had:
+  // initRecipesList();
+  // initSaveButtons();
+  // initLikeButtons();
+  // initOtherFeature();
+
+  // -----------------------
+  // Comment system (single jQuery implementation)
+  // Stores comments in localStorage under 'comments'
+  // Structure: { "<recipeId>": [{ text, time }, ...], ... }
+  // -----------------------
+  const COMMENTS_KEY = "comments";
+
+  function loadAllComments() {
+    try {
+      return JSON.parse(localStorage.getItem(COMMENTS_KEY)) || {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveAllComments(obj) {
+    localStorage.setItem(COMMENTS_KEY, JSON.stringify(obj));
+  }
+
+  function addComment(recipeId, text) {
+    if (!text) return;
+    const all = loadAllComments();
+    all[recipeId] = all[recipeId] || [];
+    all[recipeId].push({ text: text.trim(), time: Date.now() });
+    saveAllComments(all);
+  }
+
+  function renderComments($container, recipeId) {
+    const all = loadAllComments();
+    const list = all[recipeId] || [];
+    $container.empty();
+    if (list.length === 0) {
+      $container.append('<div class="no-comments">No comments yet.</div>');
+      return;
+    }
+    const $ul = $('<div class="comment-list"></div>');
+    list.forEach((item) => {
+      const date = new Date(item.time).toLocaleString();
+      const $c = $(`
+        <div class="comment-item">
+          <div class="comment-text"></div>
+          <div class="comment-meta">${date}</div>
+        </div>
+      `);
+      $c.find(".comment-text").text(item.text);
+      $ul.append($c);
+    });
+    $container.append($ul);
+  }
+
+  // Attach submit handler (delegated to support dynamic content)
+  $(document).on("click", ".submit-comment", function (e) {
+    e.preventDefault();
+    const $btn = $(this);
+    // find nearest context: item or page
+    const $item = $btn.closest(".item, .recipe-page");
+    const recipeId = $item.data("recipe") || $item.attr("id") || "global";
+    // find input in same section
+    const $input = $btn
+      .closest(".comment-section, form")
+      .find(".comment-input");
+    const text = $input.val();
+    if (!text || !text.trim()) return;
+    addComment(recipeId, text);
+    // re-render comments in this section
+    const $commentsContainer = $btn
+      .closest(".comment-section, .comments-block")
+      .find(".comments-container");
+    renderComments($commentsContainer, recipeId);
+    $input.val("");
+  });
+
+  // Render comments for any comment containers present on page load
+  $(".comments-container").each(function () {
+    const $c = $(this);
+    const $item = $c.closest(".item, .recipe-page");
+    const recipeId = $item.data("recipe") || $item.attr("id") || "global";
+    renderComments($c, recipeId);
+  });
+
+  // --- Place any other event handlers that were previously in separate ready blocks here ---
+  // e.g. delegated handlers for save/like buttons:
+  // $(document).on('click', '.save-btn', handleSave);
+  // $(document).on('click', '.like-btn', handleLike);
 });
 /*
   References:
